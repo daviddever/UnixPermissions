@@ -53,31 +53,31 @@ function setDescription(ownerRead, ownerWrite, ownerExecute, groupRead, groupWri
     var owner = ""
     var group = ""
     var other = ""
-    if ownerRead > 0 {
+    if (ownerRead > 0) {
         owner = owner + " Read";
     }
-    if ownerWrite > 0 {
+    if (ownerWrite > 0) {
         owner = owner + " Write";
     }
-    if ownerExecute > 0 {
+    if (ownerExecute > 0) {
         owner = owner + " Execute";
     }
-    if groupRead > 0 {
+    if (groupRead > 0) {
         group = group + " Read";
     }
-    if groupWrite > 0 {
+    if (groupWrite > 0) {
         group = group + " Write";
     }
-    if groupExecute > 0 {
+    if (groupExecute > 0) {
         group = group + " Execute";
     }
-    if otherRead > 0 {
+    if (otherRead > 0) {
         other = other + " Read";
     }
-    if otherWrite > 0 {
+    if (otherWrite > 0) {
         other = other + " Write";
     }
-    if otherExecute > 0 {
+    if (otherExecute > 0) {
         other = other + " Execute";
     }
     document.getElementById("owner").innerHTML = "Owner:" + owner;
