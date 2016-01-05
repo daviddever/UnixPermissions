@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Unix Permissions</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="assets/script.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-centered text-center">
+          <h1>Unix Permissions</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-centered text-center">
+          <h2>Symbolic Notation</h2>
+        </div>
+        <div class="col-md-4 col-centered text-center">
+          <h2>Octal Notation</h2>
+        </div>
+        <div class="col-md-4col-centered text-center">
+          <h2>English</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-centered text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Owner</h4>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="ownerRead" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Read</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="ownerWrite" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Write</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="ownerExecute" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Execute</small></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Group</h4>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="groupRead" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Read</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="groupWrite" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Write</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="groupExecute" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Execute</small></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Other</h4>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="otherRead" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Read</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="otherWrite" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Write</small></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-right text-right">
+                  <input type="checkbox" id="otherExecute" onclick="return validate()">
+                </div>
+                <div class="col-md-6 col-left text-left">
+                  <h4><small>Execute</small></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-centered text-center">
+          <h2 id="octal">000</h2>
+        </div>
+        <div class="col-md-4 col-centered text-center">
+          <h4 id="owner">Owner:</h4>
+          <h4 id="group">Group:</h4>
+          <h4 id="other">Other:</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
